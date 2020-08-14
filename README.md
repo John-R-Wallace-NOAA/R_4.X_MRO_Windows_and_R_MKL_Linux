@@ -35,6 +35,7 @@ Hence, following something like:
 
 Marcus was able to install R_MKL ver 4.0.1 on Tantalus.
 
-However, getting VAST 3.X support packages to work was a huge pain as I mentioned.
+However, getting VAST 3.X support packages to work was a struggle. See notes in this repo here:
 
+    Notes on running R, MRO, and R-MKL on the NWFSC's Linux servers.
 

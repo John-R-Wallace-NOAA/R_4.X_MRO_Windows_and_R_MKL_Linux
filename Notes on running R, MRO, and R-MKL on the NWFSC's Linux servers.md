@@ -15,7 +15,7 @@ Change to the desired folder and run:
     /opt/R/64-bit/R-4.0.1_MKL/bin/R
 
   
-
+In R run:
 
     > sessionInfo()
     R version 3.5.3 (2019-03-11)

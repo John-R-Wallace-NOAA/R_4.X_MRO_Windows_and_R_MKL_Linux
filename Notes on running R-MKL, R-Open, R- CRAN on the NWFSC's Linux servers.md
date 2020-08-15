@@ -109,20 +109,15 @@ Look at the session info:
     
 <h3> Starting CRAN-R
     
-For standard CRAN-R use
+<h5> For standard CRAN-R use
     
     /opt/R/64-bit/R-X.Y.Z/bin/R
 
 for the following R-CRAN versions:
 
-R-3.4.3
-R-3.5.1
-R-3.6.1
-R-3.6.2
-R-3.6.3
-R-4.0.1
+R-3.4.3, R-3.5.1, R-3.6.1, R-3.6.2, R-3.6.3, R-4.0.1
 
-For example use, for R-4.0.1 use:
+For example, for R-4.0.1 use:
 
     /opt/R/64-bit/R-4.0.1/bin/R
     

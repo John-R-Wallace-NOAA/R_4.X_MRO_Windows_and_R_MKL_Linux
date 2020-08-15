@@ -1,5 +1,5 @@
 
-<h3> Starting R-MKL and R-Open
+<h3> Starting R-MKL
 
 <h5> R-MKL ver 4.0.1
 
@@ -38,7 +38,8 @@ Look at the session info:
     loaded via a namespace (and not attached):
     [1] compiler_4.0.1
      
-     
+<h3> Starting R-Open
+    
 <h5> R-Open ver 3.5.3
 
      /opt/microsoft/ropen/3.5.3/lib64/R/bin/R

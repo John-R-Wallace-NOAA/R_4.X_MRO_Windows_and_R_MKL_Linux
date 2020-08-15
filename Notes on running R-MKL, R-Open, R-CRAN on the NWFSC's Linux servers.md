@@ -107,9 +107,9 @@ Look at the session info:
     [1] compiler_3.4.3
     
     
-<h3> Starting CRAN-R
+<h3> Starting R-CRAN
     
-<h5> For standard CRAN-R use
+<h5> For standard R-CRAN use
     
     /opt/R/64-bit/R-X.Y.Z/bin/R
 

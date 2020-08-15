@@ -1,5 +1,5 @@
 
-<h3> Starting R-MKL and R-Open, starting with the latest version
+<h3> Starting R-MKL and R-Open
 
 <h5> R-MKL ver 4.0.1
 

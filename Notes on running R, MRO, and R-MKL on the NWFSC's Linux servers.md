@@ -14,7 +14,7 @@ Change to the desired folder and run:
 
     /opt/R/64-bit/R-4.0.1_MKL/bin/R
     
-Look at the session info in R:
+Look at the session info:
 
     > sessionInfo()
     R version 4.0.1 (2020-06-06)
@@ -43,7 +43,7 @@ Look at the session info in R:
 
      /opt/microsoft/ropen/3.5.3/lib64/R/bin/R
   
-Look at the session info in R:
+Look at the session info:
 
     > sessionInfo()
     R version 3.5.3 (2019-03-11)
@@ -78,9 +78,9 @@ Look at the session info in R:
 
      /opt/microsoft/ropen/3.4.3/lib64/R/bin/R
      
-Look at the session info in R:
+Look at the session info:
 
-       > sessionInfo()
+    > sessionInfo()
     R version 3.4.3 (2017-11-30)
     Platform: x86_64-pc-linux-gnu (64-bit)
     Running under: CentOS Linux 7 (Core)
@@ -106,4 +106,51 @@ Look at the session info in R:
     loaded via a namespace (and not attached):
     [1] compiler_3.4.3
     
+    
+<h3> Starting CRAN-R
+    
+For standard CRAN-R use
+    
+    /opt/R/64-bit/R-X.Y.Z/bin/R
+
+for the following R-CRAN versions:
+
+R-3.4.3
+R-3.5.1
+R-3.6.1
+R-3.6.2
+R-3.6.3
+R-4.0.1
+
+For example use, for R-4.0.1 use:
+
+    /opt/R/64-bit/R-4.0.1/bin/R
+    
+Look at the session info:
+
+    > sessionInfo()
+    R version 4.0.1 (2020-06-06)
+    Platform: x86_64-pc-linux-gnu (64-bit)
+    Running under: CentOS Linux 7 (Core)
+    
+    Matrix products: default
+    BLAS:   /opt/R/64-bit/R-4.0.1/lib64/R/lib/libRblas.so
+    LAPACK: /opt/R/64-bit/R-4.0.1/lib64/R/lib/libRlapack.so
+    
+    locale:
+     [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+     [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+     [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+     [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+     [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+    [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+    
+    attached base packages:
+    [1] stats     graphics  grDevices utils     datasets  methods   base     
+    
+    loaded via a namespace (and not attached):
+    [1] compiler_4.0.1
+    
+
+
     

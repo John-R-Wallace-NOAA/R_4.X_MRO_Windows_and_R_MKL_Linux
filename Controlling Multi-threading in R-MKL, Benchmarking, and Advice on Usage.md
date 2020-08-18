@@ -42,7 +42,7 @@ If you ask for more cores than the maximum available, you will get the maximum:
     }
 
 
-Using just the MKL/BLAS library compared to not using it, both on one core, is 27 times faster on my currect laptop and 9.5 times faster on an available Linux server (NWFSC's Tantalus server with 32 cores (64 processors) and 256gb of memory).
+Using just the MKL/BLAS library compared to not using it, both on one core, the cross-product test is 27 times faster on my currect laptop and 9.5 times faster on an available Linux server (NWFSC's Tantalus server with 32 cores (64 processors) and 256gb of memory).
 
 Finding the balance between the number of cores to use and the io (input/output) needed to farm out the information to the workers needs to be considered.  In general, CPU cycles are much faster than io. Here is one resoure:
 

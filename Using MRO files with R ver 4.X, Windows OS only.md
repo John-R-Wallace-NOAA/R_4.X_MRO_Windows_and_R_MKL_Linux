@@ -26,7 +26,7 @@ For a properly patched R ver 4.X under Windows, the sessioninfo()'s information 
     
     # Unpatched R-CRAN
     > blas_set_num_threads(4)
-    >  blas_get_num_procs()
+    > blas_get_num_procs()
     [1] 1
 
 

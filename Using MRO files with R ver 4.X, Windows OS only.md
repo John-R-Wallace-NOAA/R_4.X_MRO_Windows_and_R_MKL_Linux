@@ -11,7 +11,9 @@ Look for the title starting with:
 
 For step 4 in the recipe the Revo packages no longer works with R ver 4.X, so skip that.  Also, if needed, the doParallel package is on CRAN, download it from there.
 
-For the Singular Value Decomposition test, getMKLthreads() no longer works, you need to use the CRAN package: 'RhpcBLASctl'. See: Controlling Multi-threading in R-MKL, Benchmarking, and Advice on Usage.md in this repo.
+For the Singular Value Decomposition test, getMKLthreads() no longer works, you need to use the CRAN package: 'RhpcBLASctl'. In this repo see: 
+
+    Controlling Multi-threading in R-MKL, Benchmarking, and Advice on Usage.md
 
 Note that sessioninfo() for a properly installed R-MKL on Linux will show a link to the Intel libraries:
 

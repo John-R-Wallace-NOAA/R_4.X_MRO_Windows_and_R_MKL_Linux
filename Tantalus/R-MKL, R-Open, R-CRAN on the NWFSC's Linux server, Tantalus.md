@@ -118,7 +118,7 @@ Look at the session info:
     
 <h3> Starting R-CRAN </h3>
     
-<h5> For standard R-CRAN use </h5>
+For standard R-CRAN use:
     
     /opt/R/64-bit/R-X.Y.Z/bin/R
 

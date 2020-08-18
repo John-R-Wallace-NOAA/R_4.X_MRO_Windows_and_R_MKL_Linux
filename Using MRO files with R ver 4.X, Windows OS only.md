@@ -1,6 +1,6 @@
 
 
-Here:
+Here*:
 
     https://social.msdn.microsoft.com/Forums/en-US/61c1c0c0-c1e9-47aa-b095-2ade5a28cf51/mro-36-coming?forum=ropen
 
@@ -41,8 +41,7 @@ For a properly patched R ver 4.X under Windows, the sessioninfo()'s information 
     > blas_get_num_procs()
     [1] 1
     
-    
-See also:
+    \*The same info can be found here:
     
     https://stackoverflow.com/questions/38090206/linking-intels-math-kernel-library-mkl-to-r-on-windows
        

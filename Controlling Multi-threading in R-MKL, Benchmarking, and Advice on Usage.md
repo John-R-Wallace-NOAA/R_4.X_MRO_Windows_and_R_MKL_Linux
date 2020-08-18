@@ -22,7 +22,7 @@ If you ask for more cores than the maximum available, you will get the maximum:
 (The function names are confusing, but the maximum that can be set is the maximum number of cores. See the blas_get_num_procs() explanation text in the help files.)
 
 
- Here is a matrix cross-product test with various number cores set:
+ Here is a matrix cross-product test with various numbers of cores set:
  
     for ( i in c(1, 2, 4, 8)) { 
     

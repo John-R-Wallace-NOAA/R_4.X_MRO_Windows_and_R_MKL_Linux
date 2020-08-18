@@ -10,7 +10,7 @@ The number of CPU physical and logical processors can be found with:
     get_num_cores()
     get_num_procs()
 
-Setting the number of threads to use, and checking that number is done with:
+Setting the number of threads to use, and checking that number, is done with:
      
     blas_set_num_threads(4)
     blas_get_num_procs()

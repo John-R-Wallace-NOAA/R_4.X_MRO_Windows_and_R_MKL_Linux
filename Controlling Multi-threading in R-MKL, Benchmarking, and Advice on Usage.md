@@ -1,4 +1,4 @@
-
+A properly installed R-MKL will show 
 R-MKL ver 4.X on Linux and patching R ver 4.X with MRO files (see Using MRO files with R ver 4.X, Windows OS only.md) both require the use of the CRAN package, 'RhpcBLASctl', to control multi-threading.
 
     install.packages('RhpcBLASctl')

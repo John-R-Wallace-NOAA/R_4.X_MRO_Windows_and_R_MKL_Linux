@@ -41,7 +41,7 @@ For a properly patched R ver 4.X under Windows, the sessioninfo()'s information 
     > blas_get_num_procs()
     [1] 1
     
-    \*The same info can be found here:
+    *The same info can be found here:
     
     https://stackoverflow.com/questions/38090206/linking-intels-math-kernel-library-mkl-to-r-on-windows
        

@@ -1,5 +1,5 @@
 
-R-MKL ver 4.X on Linux and patching R ver 4.X with MRO files (see Using MRO files with R ver 4.X, Windows OS only.md) both require the use of the CRAN package, 'RhpcBLASctl", to control multi-threading.
+R-MKL ver 4.X on Linux and patching R ver 4.X with MRO files (see Using MRO files with R ver 4.X, Windows OS only.md) both require the use of the CRAN package, 'RhpcBLASctl', to control multi-threading.
 
     install.packages('RhpcBLASctl')
     library(RhpcBLASctl)
@@ -22,4 +22,21 @@ If you ask for more cores than the maximum available, you will get the maximum:
 (The function names are confusing, but the maximum that can be set is the maximum number of cores. The function explanation text in the help files is consistent.)
 
 
+ Here is a Cholesky Factorization test with varies number cores set:
+ 
+    for ( i in c(1, 2, 4, 8)) { 
+	
+	     RhpcBLASctl::blas_set_num_threads(i)
+         print(RhpcBLASctl::blas_get_num_procs())
+         
+         # Cholesky Factorization 
+         set.seed (1)
+         m <- 10000
+         n <- 5000
+         A <- matrix (runif (m*n),m,n)
+         
+         # Matrix multiply
+         print(system.time (B <- crossprod(A)))
+		 cat("\n\n")
+    }
 

@@ -8,7 +8,8 @@ Look for the title starting with:
 
 <H3> Here is a short recipe to get Intel MKL up and running with R 3.6.2, just by copying across some of the Intel MKL BLAS files from Microsoft R Open to R 3.6.2, this is easier than having to recompile the whole of R against the Intel MKL libs
 
-For step 4 in the recipe: The Revo packages no longer works with R ver 4.X, so skip that.  Also, if needed, the doParallel package is on CRAN, download it from there.
+
+<H7>For step 4 in the recipe: The Revo packages no longer works with R ver 4.X, so skip that.  Also, if needed, the doParallel package is on CRAN, download it from there.
 
 For the Singular Value Decomposition test, getMKLthreads() no longer works, you need to use the CRAN package: 'RhpcBLASctl'. See: Controlling Multi-threading in R-MKL, Benchmarking, and Advice on Usage.md in this repo which includes a cross-product speed test.
 

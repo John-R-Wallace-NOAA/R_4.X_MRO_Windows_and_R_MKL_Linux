@@ -42,9 +42,9 @@ For a properly patched R ver 4.X under Windows, the sessioninfo()'s information 
     [1] 1
     
     
-    See also:
+See also:
     
-       https://stackoverflow.com/questions/38090206/linking-intels-math-kernel-library-mkl-to-r-on-windows
+    https://stackoverflow.com/questions/38090206/linking-intels-math-kernel-library-mkl-to-r-on-windows
        
        
     

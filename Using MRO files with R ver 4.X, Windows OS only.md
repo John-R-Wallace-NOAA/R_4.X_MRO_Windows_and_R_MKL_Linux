@@ -10,7 +10,7 @@ Look for the title:
 
 This recipe will work for R ver 4.X, with the following changes.
 
-For step 4 in the recipe, the Revo packages no longer work with R ver 4.X, so skip that.  If needed, the doParallel package is on CRAN, download it from there.
+Skip step 4 in the recipe since the Revo packages no longer work with R ver 4.X.  If needed, the doParallel package is on CRAN, download it from there.
 
 For the Singular Value Decomposition test, getMKLthreads() no longer works, you need to use the CRAN package: 'RhpcBLASctl'. In this repo see: 
 

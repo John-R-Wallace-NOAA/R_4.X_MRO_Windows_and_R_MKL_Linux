@@ -20,7 +20,7 @@ All 3 lines can be put in the command window if desired:
     MKL="-Wl,--no-as-needed -lmkl_gf_lp64 -Wl,--start-group -lmkl_gnu_thread Â -lmkl_core Â -Wl,--end-group -fopenmp Â -ldl -lpthread -lm"
     /opt/R/64-bit/R-4.0.1_MKL/bin/R
     
-but, without adding the first 2 lines to your .bashrc file, this would have to done for each new command window opened 
+but, without adding the first 2 lines to your .bashrc file, this will have to done for each new command window opened. 
     
 Look at the session info:
 

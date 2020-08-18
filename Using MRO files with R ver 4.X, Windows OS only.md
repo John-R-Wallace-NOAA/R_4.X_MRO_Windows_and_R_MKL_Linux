@@ -14,7 +14,7 @@ Whereas, R-CRAN shows the standard libraries are used:
     BLAS:   /opt/R/64-bit/R-4.0.1/lib64/R/lib/libRblas.so
     LAPACK: /opt/R/64-bit/R-4.0.1/lib64/R/lib/libRlapack.so
     
-For a properly patched R ver 4.X under Windows sessioninfo() doesn't change, however using RhpcBLASctl::blas_get_num_procs() will push the 'detected function mkl_get_max_threads' message and it will report the number of cores set as being greater than 1.  Standard R-CRAN will do neither of these things:
+For a properly patched R ver 4.X under Windows, the sessioninfo()'s information doesn't change, however using RhpcBLASctl::blas_get_num_procs() will push the 'detected function mkl_get_max_threads' message and it will report the number of cores set as being greater than 1.  Standard R-CRAN will do neither of these things:
     
     >  blas_set_num_threads(4)
     detected function mkl_set_num_threads
@@ -23,5 +23,5 @@ For a properly patched R ver 4.X under Windows sessioninfo() doesn't change, how
     [1] 4
 
    
-    
+  Also getLoadedDLLs() will show that 'RhpcBLASctl.dll' is loaded.
 

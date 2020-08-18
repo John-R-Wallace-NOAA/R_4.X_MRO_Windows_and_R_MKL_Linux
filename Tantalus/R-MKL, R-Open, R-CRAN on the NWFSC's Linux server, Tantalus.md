@@ -147,6 +147,4 @@ Look at the session info:
     loaded via a namespace (and not attached):
     [1] compiler_4.0.1
     
-
-
-    
+Note that using just 'R' in the command window will give R-Open ver 3.5.3 (The information found by typing 'Rlist' at the command prompt is slightly out of date (as of 18 Aug 2020).)

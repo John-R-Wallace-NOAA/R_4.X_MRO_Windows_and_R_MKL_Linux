@@ -19,7 +19,7 @@ If you ask for more cores than the maximum available, you will get the maximum:
     blas_set_num_threads(5000) # (Inf throws an error.)
     blas_get_num_procs()
 
-(The function names are confusing, but the maximum that can be set is the maximum number of cores. The function explanation text in the help files is consistent.)
+(The function names are confusing, but the maximum that can be set is the maximum number of cores. See the blas_get_num_procs() explanation text in the help files.)
 
 
  Here is a matrix cross-product test with various number cores set:
@@ -28,8 +28,7 @@ If you ask for more cores than the maximum available, you will get the maximum:
     
          RhpcBLASctl::blas_set_num_threads(i)
          print(RhpcBLASctl::blas_get_num_procs())
-         
-         # Cholesky Factorization 
+        
          set.seed (1)
          m <- 3000
          n <- 5000
@@ -38,7 +37,6 @@ If you ask for more cores than the maximum available, you will get the maximum:
          # Matrix cross-product 
          # print(system.time (B <- t(A) %*% A)) # Same answer but slower
          print(system.time (B <- crossprod(A)))
-          
          cat("\n\n")
     }
 

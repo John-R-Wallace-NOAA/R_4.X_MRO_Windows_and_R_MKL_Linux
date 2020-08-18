@@ -3,7 +3,7 @@ MRO (Microsoft Ropen):
 
     https://mran.revolutionanalytics.com/rro
 
-added the  MKL (Math Kernel Library)  BLAS and LAPACK library functions which provides, among other things, auto multi-threading (you do want to supply the max threads to use on a server):
+added the  MKL (Math Kernel Library)  BLAS and LAPACK library functions which provides, among other things, multi-threading (you do want to supply the max threads to use on a server):
 
       https://software.intel.com/content/www/us/en/develop/tools/math-kernel-library.html
 

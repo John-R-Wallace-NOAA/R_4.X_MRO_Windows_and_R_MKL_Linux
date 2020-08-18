@@ -1,7 +1,7 @@
 
-<h3> Starting R-MKL
+<h3> Starting R-MKL </h3>
 
-<h5> R-MKL ver 4.0.1
+<h5> R-MKL ver 4.0.1 </h5>
 
 In your root folder, add the following two lines to the bottom of the '.bashrc' file (not needed for R < ver 4.X): 
 
@@ -38,9 +38,9 @@ Look at the session info:
     loaded via a namespace (and not attached):
     [1] compiler_4.0.1
      
-<h3> Starting R-Open
+<h3> Starting R-Open </h3>
     
-<h5> R-Open ver 3.5.3
+<h5> R-Open ver 3.5.3 </h5>
 
      /opt/microsoft/ropen/3.5.3/lib64/R/bin/R
   
@@ -75,7 +75,7 @@ Look at the session info:
 
 
 
-<h5> R-Open ver 3.4.3
+<h5> R-Open ver 3.4.3 </h5> 
 
      /opt/microsoft/ropen/3.4.3/lib64/R/bin/R
      
@@ -108,9 +108,9 @@ Look at the session info:
     [1] compiler_3.4.3
     
     
-<h3> Starting R-CRAN
+<h3> Starting R-CRAN </h3>
     
-<h5> For standard R-CRAN use
+<h5> For standard R-CRAN use </h5>
     
     /opt/R/64-bit/R-X.Y.Z/bin/R
 

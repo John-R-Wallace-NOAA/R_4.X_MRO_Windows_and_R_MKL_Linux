@@ -45,7 +45,7 @@ Using the MKL/BLAS library compared to not using it, both on one core, is 27 tim
 
 
 
-Finding the balance between the number of cores to use and the io needed to farm out the work to workers needs to be considered.  Here is one resoure:
+Finding the balance between the number of cores to use and the io needed to farm out the work to the workers needs to be considered.  Here is one resoure:
 
 https://psu-psychology.github.io/r-bootcamp-2018/talks/parallel_r.html
 

@@ -22,7 +22,7 @@ If you ask for more cores than the maximum available, you will get the maximum:
 (The function names are confusing, but the maximum that can be set is the maximum number of cores. The function explanation text in the help files is consistent.)
 
 
- Here is a Cholesky Factorization test with varies number cores set:
+ Here is a Cholesky Factorization test with various number cores set:
  
     for ( i in c(1, 2, 4, 8)) { 
 	

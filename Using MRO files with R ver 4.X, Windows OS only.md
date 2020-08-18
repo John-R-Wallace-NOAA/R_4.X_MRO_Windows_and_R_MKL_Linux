@@ -40,4 +40,13 @@ For a properly patched R ver 4.X under Windows, the sessioninfo()'s information 
     > blas_set_num_threads(4)
     > blas_get_num_procs()
     [1] 1
+    
+    
+    See also:
+    
+       https://stackoverflow.com/questions/38090206/linking-intels-math-kernel-library-mkl-to-r-on-windows
+       
+       
+    
+    
 

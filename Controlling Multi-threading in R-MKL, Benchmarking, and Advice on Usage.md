@@ -41,3 +41,16 @@ If you ask for more cores than the maximum available, you will get the maximum:
     }
 
 
+Using the MKL/BLAS library compared to not using it, both on one core, is 27 times faster on my currect laptop and 9.5 times faster on Tantalus (a Linux server).
+
+
+
+Finding the balance between the number of cores to use and the io needed to farm out the work to workers needs to be considered.  Here is one resoure:
+
+https://psu-psychology.github.io/r-bootcamp-2018/talks/parallel_r.html
+
+"If the total compute time needed to process a queue scales linearly with the number of cores used in parallel, we say the problem has ‘linear speedup.’ This is the best case scenario, sometimes referred to as an ‘embarrassingly parallel’ problem. Much of the time, however, the compute time hits an asymptotic wall where the benefits of using additional cores are outweighed by the costs of coordinating information flow among so many workers."
+
+
+
+

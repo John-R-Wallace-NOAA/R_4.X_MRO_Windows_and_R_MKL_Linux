@@ -1,6 +1,6 @@
 Microsoft's R OPEN was supported for R versions 3.20 through 3.5.3 (https://mran.revolutionanalytics.com/news#r353) and used the functions getMKLthreads() and setMKLthreads() to control multi-threading.
 
-R-MKL ver 4.X on Linux and patching R ver 4.X with MRO files (see: Using MRO files with R ver 4.X, Windows OS only.md) both require the use of the CRAN package, 'RhpcBLASctl', to control multi-threading.
+R-MKL ver 4.X on Linux and patching R ver 4.X with MRO files (see: Using MRO files with R ver 4.X, Windows OS only.md) both require the use of the CRAN package, 'RhpcBLASctl', to control multi-threading:
 
     install.packages('RhpcBLASctl')
     library(RhpcBLASctl)
@@ -42,7 +42,7 @@ If you ask for more cores than the maximum available, you will get the maximum:
     }
 
 
-Using just the MKL/BLAS library compared to not using it, both on one core, is 27 times faster on my currect laptop and 9.5 times faster on an available Linux server (NWFSC's Tantalus server with 32 cores and 256gb of memory).
+Using just the MKL/BLAS library compared to not using it, both on one core, is 27 times faster on my currect laptop and 9.5 times faster on an available Linux server (NWFSC's Tantalus server with 32 cores (64 processors) and 256gb of memory).
 
 Finding the balance between the number of cores to use and the io (input/output) needed to farm out the information to the workers needs to be considered.  In general, CPU cycles are much faster than io. Here is one resoure:
 

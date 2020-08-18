@@ -41,9 +41,7 @@ If you ask for more cores than the maximum available, you will get the maximum:
     }
 
 
-Using just the MKL/BLAS library compared to not using it, both on one core, is 27 times faster on my currect laptop and 9.5 times faster on Tantalus (a Linux server).
-
-
+Using just the MKL/BLAS library compared to not using it, both on one core, is 27 times faster on my currect laptop and 9.5 times faster on an available Linux server (NWFSC's Tantalus server with 32 cores an 256gb of memory).
 
 Finding the balance between the number of cores to use and the io needed to farm out the work to the workers needs to be considered.  Here is one resoure:
 

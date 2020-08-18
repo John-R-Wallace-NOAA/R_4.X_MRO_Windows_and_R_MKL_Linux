@@ -1,9 +1,9 @@
 
-MRO (Microsoft Ropen):
+Microsoft R-Open (MRO, previously Revolution Analytics) :
 
     https://mran.revolutionanalytics.com/rro
 
-added the  MKL (Math Kernel Library)  BLAS and LAPACK library functions which provides, among other things, multi-threading (you do want to supply the max threads to use on a server):
+added the  MKL (Math Kernel Library)  BLAS and LAPACK library functions which provides, among other things, multi-threading:
 
       https://software.intel.com/content/www/us/en/develop/tools/math-kernel-library.html
 
@@ -20,22 +20,26 @@ Their GitHub is here:
 But MS seems to have stopped supporting it, without explanation, after R ver 3.5.3. I see on the GitHub Issues that the someone tried to continue the compiling with R ver 4.X, but without success it seems.
 
 
-In the Ropen forum,
+In the R-Open forum,
 
      https://social.msdn.microsoft.com/Forums/en-US/61c1c0c0-c1e9-47aa-b095-2ade5a28cf51/mro-36-coming?forum=ropen
 
 there is an entry with the title:  Short recipe to get Intel MKL up and running with R 3.6.2
 
-I have figured out how to make that recipe work with R 4.X on Windows, but it doesn't work for Linux.
+I have figured out how to make that recipe work with R 4.X on Windows. See:
+
+    Using MRO files with R ver 4.X, Windows OS only.md
+    
+but it doesn't work for Linux.
 
 
-Hence, following something like:
+However, following something like:
 
      https://software.intel.com/content/www/us/en/develop/articles/quick-linking-intel-mkl-blas-lapack-to-r.html
 
-Marcus was able to install R_MKL ver 4.0.1 on Tantalus.
+NWFSC's Marcus Nedelmann <marcus.nedelmann@noaa.gov> was able to install R_MKL ver 4.0.1 on Tantalus.
 
-However, getting VAST 3.X support packages to work was a struggle. See notes in this repo here:
+Getting VAST 3.X (https://github.com/James-Thorson-NOAA/VAST) support packages, such as rgdal, to work was a struggle. See notes in this repo here:
 
-    Notes on running R, MRO, and R-MKL on the NWFSC's Linux servers.
+    Tantalus/Notes on running R, MRO, and R-MKL on the NWFSC's Linux servers.
 

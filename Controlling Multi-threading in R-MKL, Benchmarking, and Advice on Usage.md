@@ -22,21 +22,24 @@ If you ask for more cores than the maximum available, you will get the maximum:
 (The function names are confusing, but the maximum that can be set is the maximum number of cores. The function explanation text in the help files is consistent.)
 
 
- Here is a Cholesky Factorization test with various number cores set:
+ Here is a matrix cross-product test with various number cores set:
  
     for ( i in c(1, 2, 4, 8)) { 
-	
-	     RhpcBLASctl::blas_set_num_threads(i)
+    
+         RhpcBLASctl::blas_set_num_threads(i)
          print(RhpcBLASctl::blas_get_num_procs())
          
          # Cholesky Factorization 
          set.seed (1)
-         m <- 10000
+         m <- 3000
          n <- 5000
-         A <- matrix (runif (m*n),m,n)
+         A <- matrix(runif(m*n), m, n)
          
-         # Matrix multiply
+         # Matrix cross-product 
+         # print(system.time (B <- t(A) %*% A)) # Same answer but slower
          print(system.time (B <- crossprod(A)))
-		 cat("\n\n")
+          
+         cat("\n\n")
     }
+
 

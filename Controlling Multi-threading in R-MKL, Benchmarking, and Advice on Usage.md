@@ -1,5 +1,6 @@
-A properly installed R-MKL will show 
-R-MKL ver 4.X on Linux and patching R ver 4.X with MRO files (see Using MRO files with R ver 4.X, Windows OS only.md) both require the use of the CRAN package, 'RhpcBLASctl', to control multi-threading.
+Microsoft's R OPEN was supported for R versions 3.20 through 3.5.3 (https://mran.revolutionanalytics.com/news#r353) and used the functions getMKLthreads() and setMKLthreads() to control multi-threading.
+
+R-MKL ver 4.X on Linux and patching R ver 4.X with MRO files (see: Using MRO files with R ver 4.X, Windows OS only.md) both require the use of the CRAN package, 'RhpcBLASctl', to control multi-threading.
 
     install.packages('RhpcBLASctl')
     library(RhpcBLASctl)

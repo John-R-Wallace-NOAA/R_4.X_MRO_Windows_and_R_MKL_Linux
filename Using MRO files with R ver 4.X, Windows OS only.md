@@ -54,7 +54,9 @@ Tom Wenseleers' post also covers using Intel's latest files directly. If that is
 
 The runtime savings for the benchmarking tests (in Controlling Multi-threading in R-MKL, Benchmarking, and Advice on Usage.md) using the latest Intel MKL files are similar to using the MRO ver 3.5.3 files.
 
-    
+
+<H4> Footnotes <\H4>
+
 *The same info can be found here:
     
     https://stackoverflow.com/questions/38090206/linking-intels-math-kernel-library-mkl-to-r-on-windows

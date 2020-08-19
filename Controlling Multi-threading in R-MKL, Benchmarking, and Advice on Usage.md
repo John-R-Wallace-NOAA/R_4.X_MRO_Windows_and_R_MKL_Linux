@@ -45,7 +45,7 @@ If you ask for more cores than the maximum available, you will get the maximum:
 
 Using just the MKL/BLAS library compared to not using it, both on one core, the cross-product test is 27 times faster on my currect laptop and 9.5 times faster on an available Linux server (NWFSC's Tantalus server with 32 cores (64 processors) and 256gb of memory).
 
-Using the 'RhpcBLASctl' package, Tom Wenseleers' Singular Value Decomposition test can now be looked at over a different number of cores. n = 2000 was changed to n = 3000 for greater contrast: 
+Using the 'RhpcBLASctl' package, Tom Wenseleers' Singular Value Decomposition test can now be looked at over a different number of cores. Note that n = 2000 was changed to n = 3000 for greater contrast: 
     
     for ( i in c(1, 2, 4, 8)) { 
     

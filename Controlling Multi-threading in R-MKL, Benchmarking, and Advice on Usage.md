@@ -45,6 +45,25 @@ If you ask for more cores than the maximum available, you will get the maximum:
 
 Using just the MKL/BLAS library compared to not using it, both on one core, the cross-product test is 27 times faster on my currect laptop and 9.5 times faster on an available Linux server (NWFSC's Tantalus server with 32 cores (64 processors) and 256gb of memory).
 
+Using the 'RhpcBLASctl' package, Tom Wenseleers' Singular Value Decomposition test can now be looked at over a different number of cores. n = 2000 was changed to n = 3000 for greater contrast: 
+    
+    for ( i in c(1, 2, 4, 8)) { 
+    
+         RhpcBLASctl::blas_set_num_threads(i)
+         print(RhpcBLASctl::blas_get_num_procs())
+        
+         set.seed (1)
+         # Singular Value Decomposition
+         m <- 10000
+         n <- 3000
+         A <- matrix (runif (m*n),m,n)
+         print(system.time (S <- svd (A,nu=0,nv=0)))
+    	 cat("\n\n")
+    }
+    
+Here also, a large runtime savings is seen by just using the MKL/BLAS library compared to not using it, both on one core. On the afore mentioned Linux server, using the MKL/BLAS library was ~21 times faster running the singular value decomposition test.
+
+
 Finding the balance between the number of cores to use and the io (input/output) needed to farm out the information to the workers needs to be considered.  In general, CPU cycles are much faster than io. Here is one resoure:
 
 https://psu-psychology.github.io/r-bootcamp-2018/talks/parallel_r.html

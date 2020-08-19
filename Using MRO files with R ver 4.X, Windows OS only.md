@@ -52,7 +52,7 @@ Tom Wenseleers' post also covers using Intel's latest files directly. If that is
     detected function mkl_domain_get_max_threads
     [1] 4
 
-The runtime savings for the cross-product test using the latest Intel files are similar to using the MRO ver 3.5.3 files.
+The runtime savings for the benchmarking cross-product test (in Controlling Multi-threading in R-MKL, Benchmarking, and Advice on Usage.md) using the latest Intel MKL files are similar to using the MRO ver 3.5.3 files.
 
     
 *The same info can be found here:

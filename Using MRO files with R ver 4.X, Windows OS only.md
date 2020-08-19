@@ -16,7 +16,7 @@ For the Singular Value Decomposition test, getMKLthreads() no longer works, you 
 
     Controlling Multi-threading in R-MKL, Benchmarking, and Advice on Usage.md
 
-Note that sessionInfo() for a properly installed R-MKL on Linux will show a link to the Intel libraries:
+Note that sessionInfo() for a properly installed R-MKL on Linux (CentOS) will show a link to the Intel libraries:
 
     BLAS/LAPACK: /opt/intel/compilers_and_libraries_2020.1.217/linux/mkl/lib/intel64_lin/libmkl_gf_lp64.so
 

@@ -42,7 +42,7 @@ For a properly patched R ver 4.X under Windows, the sessioninfo()'s information 
     [1] 1
     
 
-Tom Wenseleers' post also covers using Intel's files directly. If that is done, then the 'RhpcBLASctl' package functions still work with the message now changed to 'detected function mkl_domain_set_num_threads':
+Tom Wenseleers' post also covers using Intel's latest files directly. If that is done, then the 'RhpcBLASctl' package functions still work with the message now changed to 'detected function mkl_domain_set_num_threads':
 
     # Patched R ver 4.X with files directly from Intel
     > blas_set_num_threads(4)
@@ -52,7 +52,7 @@ Tom Wenseleers' post also covers using Intel's files directly. If that is done, 
     detected function mkl_domain_get_max_threads
     [1] 4
 
-
+The runtime savings for the cross-product test using the latest Intel files are similar to using the MRO ver 3.5.3 files.
 
     
 *The same info can be found here:

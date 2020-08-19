@@ -42,7 +42,7 @@ For a properly patched R ver 4.X under Windows, the sessionInfo()'s information 
     [1] 1
     
 
-Tom Wenseleers' post also covers using Intel's latest files directly. If that is done, then the 'RhpcBLASctl' package functions still work with the message now changed to 'detected function mkl_domain_set_num_threads':
+Tom Wenseleers' post also covers using Intel's latest files directly. If that is done, then the 'RhpcBLASctl' package functions still work with blas_get_num_procs()'s message now changed to 'detected function mkl_domain_get_num_threads':
 
     # Patched R ver 4.X with files directly from Intel
     > blas_set_num_threads(4)

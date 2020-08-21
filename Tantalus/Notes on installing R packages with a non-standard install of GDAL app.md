@@ -17,7 +17,7 @@ To see the version of an app on Linux:
     [jwallace@nwctantalus ~]$ rpm -q gdal
     gdal-1.11.4-3.el7.x86_64
     
-To see the location of an app on Linux:
+To see the location of an app
 
     [jwallace@nwctantalus ~]$ rpm -ql gdal
     /usr/bin/8211createfromxml
@@ -28,13 +28,22 @@ To see the location of an app on Linux:
     /usr/bin/gdal_rasterize
     ...
     
+Linker bindings entries for an app: 
+
+    [jwallace@nwctantalus R]$ ldconfig -p | grep gdal
+    
+    
+ See also 'Failing to install sf on a CentoOS machine with R 3.5.1':
+ 
+     https://github.com/r-spatial/sf/issues/815
+    
 --------------------------------------------------------
 
 Following:
 
     http://www.r-inla.org/download
 
-the steps for the stable INLA install are:
+the steps for the stable INLA install in R are:
 
     install.packages("BiocManager")
     BiocManager::install(version = "3.11")
@@ -42,11 +51,6 @@ the steps for the stable INLA install are:
 
 --------------------------------------------------------
 
-Linker bindings entries
-
-    [jwallace@nwctantalus R]$ ldconfig -p | grep gdal
-    
-    
     
     
     

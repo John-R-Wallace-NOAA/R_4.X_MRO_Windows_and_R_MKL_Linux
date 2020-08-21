@@ -47,6 +47,7 @@ the steps for a stable INLA install in R are:
 
     install.packages("BiocManager")
     BiocManager::install(version = "3.11")
+    BiocManager::install(c("graph", "Rgraphviz"))
     install.packages("INLA", repos=c(getOption("repos"), INLA="https://inla.r-inla-download.org/R/stable")
 
 --------------------------------------------------------

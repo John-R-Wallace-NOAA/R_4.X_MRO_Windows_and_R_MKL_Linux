@@ -63,16 +63,34 @@ Using the 'RhpcBLASctl' package, Tom Wenseleers' Singular Value Decomposition te
     
 Here also, a large runtime savings is seen by just using the MKL/BLAS library compared to not using it, both on one core. On the aforementioned Linux server, using the MKL/BLAS library was ~21 times faster running the singular value decomposition test.
 
-Found out about the RhpcBLASct package  here:
+I found out about the RhpcBLASct package  here:
 
     https://stackoverflow.com/questions/45794290/in-r-how-to-control-multi-threading-in-blas-parallel-matrix-product
     
-
+------
+    
 Finding the balance between the number of cores to use and the io (input/output) needed to farm out the information to the workers needs to be considered.  In general, CPU cycles are much faster than io. Here is one resource:
 
 https://psu-psychology.github.io/r-bootcamp-2018/talks/parallel_r.html
 
 "If the total compute time needed to process a queue scales linearly with the number of cores used in parallel, we say the problem has ‘linear speedup.’ This is the best case scenario, sometimes referred to as an ‘embarrassingly parallel’ problem. Much of the time, however, the compute time hits an asymptotic wall where the benefits of using additional cores are outweighed by the costs of coordinating information flow among so many workers."
+
+----------------
+
+CRAN information about BLAS can be found here:
+
+    https://cran.r-project.org/doc/manuals/r-release/R-admin.html#BLAS
+    
+----------------
+
+ One should be aware of the issue of "multi" multi-threading; using both the multi-threading talked about here and doing explicit parallel processing with packages such as 'parallel' and 'snow'.
+
+This was a concern for the creator of a bioinformatics data package here:
+
+    https://r.789695.n4.nabble.com/Control-multi-threading-in-standard-matrix-product-td4744826.html
+
+
+
 
 
 

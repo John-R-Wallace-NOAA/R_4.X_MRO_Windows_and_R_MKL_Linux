@@ -63,6 +63,10 @@ Using the 'RhpcBLASctl' package, Tom Wenseleers' Singular Value Decomposition te
     
 Here also, a large runtime savings is seen by just using the MKL/BLAS library compared to not using it, both on one core. On the aforementioned Linux server, using the MKL/BLAS library was ~21 times faster running the singular value decomposition test.
 
+Found out about the RhpcBLASct package  here:
+
+    https://stackoverflow.com/questions/45794290/in-r-how-to-control-multi-threading-in-blas-parallel-matrix-product
+    
 
 Finding the balance between the number of cores to use and the io (input/output) needed to farm out the information to the workers needs to be considered.  In general, CPU cycles are much faster than io. Here is one resource:
 

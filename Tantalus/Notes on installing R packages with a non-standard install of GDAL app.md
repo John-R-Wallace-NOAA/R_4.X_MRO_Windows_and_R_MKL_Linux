@@ -43,7 +43,7 @@ Following:
 
     http://www.r-inla.org/download
 
-the steps for the stable INLA install in R are:
+the steps for a stable INLA install in R are:
 
     install.packages("BiocManager")
     BiocManager::install(version = "3.11")
@@ -51,6 +51,13 @@ the steps for the stable INLA install in R are:
 
 --------------------------------------------------------
 
+List library paths in R on Linux:
+
+    .libPaths()
+
+    
+    
+    
     
     
     

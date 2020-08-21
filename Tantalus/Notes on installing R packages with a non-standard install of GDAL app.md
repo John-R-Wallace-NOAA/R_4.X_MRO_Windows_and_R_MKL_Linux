@@ -11,8 +11,26 @@ To keep an older version of GDAL installed for the older versions of R and R-Ope
     
     install.packages('sf', configure.args = "--with-gdal-config=/opt/gdal/gdal-2.4.1/bin/gdal-config")
     library(sf)
+
+To see the version of an app on Linux:
+
+    [jwallace@nwctantalus ~]$ rpm -q gdal
+    gdal-1.11.4-3.el7.x86_64
     
-# -------------------------------------------------------------
+To see the location of an app on Linux:
+
+    [jwallace@nwctantalus ~]$ rpm -ql gdal
+    /usr/bin/8211createfromxml
+    /usr/bin/8211dump
+    /usr/bin/8211view
+    /usr/bin/gdal_contour
+    /usr/bin/gdal_grid
+    /usr/bin/gdal_rasterize
+    ...
+    
+--------------------------------------------------------
+
+Following:
 
     http://www.r-inla.org/download
 
@@ -21,3 +39,24 @@ the steps for the stable INLA install are:
     install.packages("BiocManager")
     BiocManager::install(version = "3.11")
     install.packages("INLA", repos=c(getOption("repos"), INLA="https://inla.r-inla-download.org/R/stable")
+
+--------------------------------------------------------
+
+Linker bindings entries
+
+    [jwallace@nwctantalus R]$ ldconfig -p | grep gdal
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

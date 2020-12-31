@@ -17,7 +17,7 @@ Their GitHub is here:
 
      https://github.com/microsoft/microsoft-r-open
 
-But MS seems to have stopped supporting it, without explanation, after R ver 3.5.3. I see on the GitHub Issues that the someone tried to continue the compiling with R ver 4.X, but without success it seems.
+But MS seems to have stopped supporting it, without explanation, after R ver 3.5.3. I see on the GitHub Issues that someone tried to continue the compiling with R ver 4.X, but without success it seems.
 
 
 In the R-Open forum,

@@ -41,7 +41,7 @@ Linker bindings entries for an app:
 
 Following:
 
-    http://www.r-inla.org/download
+    https://www.r-inla.org/download-install
 
 the steps for a stable INLA install in R are:
 

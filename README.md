@@ -28,12 +28,11 @@ there is an entry with the title:  Short recipe to get Intel MKL up and running 
 
 I have figured out how to make that recipe work with R 4.X on Windows. See:
 
-    Using MRO files with R ver 4.X, Windows OS only.md
-    
-but it doesn't work for Linux.
+    Using MRO or MKL files with R ver 4.X under Windows OS.md
 
+Update: Now that the MRO files are older, I have registered with Intel, and I am now using their newer files.
 
-However, following something like:
+For Linux, following something similar to:
 
 https://software.intel.com/content/www/us/en/develop/articles/quick-linking-intel-mkl-blas-lapack-to-r.html
 

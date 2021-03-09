@@ -1,7 +1,7 @@
 
 Microsoft R-Open (MRO, previously Revolution Analytics) :
 
-https://mran.revolutionanalytics.com/rro
+   https://mran.revolutionanalytics.com/rro
 
 added the  MKL (Math Kernel Library)  BLAS and LAPACK library functions which provides, among other things, multi-threading:
 

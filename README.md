@@ -30,7 +30,7 @@ I have figured out how to make that recipe work with R 4.X on Windows. See:
 
     Using MRO or MKL files with R ver 4.X under Windows OS.md
 
-Update: Now that the MRO files are older, I have registered with Intel, and I am now using their newer files.
+Update: Now that the MRO files are older, I have registered with Intel, and I am now using their newer files (Guilherme Higashi's Method 2).
 
 For Linux, following something similar to:
 

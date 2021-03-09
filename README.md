@@ -37,7 +37,7 @@ However, following something like:
 
      https://software.intel.com/content/www/us/en/develop/articles/quick-linking-intel-mkl-blas-lapack-to-r.html
 
-NWFSC's Marcus Nedelmann <marcus.nedelmann@noaa.gov> was able to install R_MKL ver 4.0.1 on Tantalus.
+NWFSC's Marcus Nedelmann <marcus.nedelmann@noaa.gov> was able to install R_MKL ver 4.0.1 on Tantalus (a Linux server running CentOS).
 
 Getting VAST 3.X (https://github.com/James-Thorson-NOAA/VAST) support packages, such as rgdal, to work was a struggle. See notes in this repo here:
 

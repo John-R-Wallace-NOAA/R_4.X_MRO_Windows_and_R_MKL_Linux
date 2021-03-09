@@ -59,7 +59,7 @@ The runtime savings for the benchmarking tests (in Controlling Multi-threading i
 
 *The same info can be found here:
     
-    https://stackoverflow.com/questions/38090206/linking-intels-math-kernel-library-mkl-to-r-on-windows
+https://stackoverflow.com/questions/38090206/linking-intels-math-kernel-library-mkl-to-r-on-windows
        
 This site points out that "Moving the MKL libs from MRO to normal R is a breach of the license: mran.microsoft.com/assets/text/mkl-eula.txt, hence that part is only a suggestion and do so at your own legal risk. Besides, the Intel method gets you the latest files available.
     

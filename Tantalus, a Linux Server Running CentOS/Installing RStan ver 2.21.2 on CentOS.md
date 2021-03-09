@@ -19,7 +19,7 @@ Also, I needed to install 'shiny' first before 'shinystan' would install. 'shiny
 
 In addition, 'igraph', needed by 'shinystan' didn't install properly until after I used this Makevars (but other things may have got fixed).
 
-Lastly, before finding and using these Makevars settings I tried using the lightweight interface 'cmdstanr', but that didn't work until RStan was working.
+Lastly, before finding and using these Makevars settings I tried using the lightweight interface 'cmdstanr' ( https://mc-stan.org/cmdstanr/ ), but that didn't work until RStan was working.
 
 'cmdstanr' may have worked without RStan if I had installed it with this Makevars.
 

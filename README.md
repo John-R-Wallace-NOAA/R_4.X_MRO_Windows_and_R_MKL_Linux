@@ -35,7 +35,7 @@ but it doesn't work for Linux.
 
 However, following something like:
 
-     https://software.intel.com/content/www/us/en/develop/articles/quick-linking-intel-mkl-blas-lapack-to-r.html
+https://software.intel.com/content/www/us/en/develop/articles/quick-linking-intel-mkl-blas-lapack-to-r.html
 
 NWFSC's Marcus Nedelmann <marcus.nedelmann@noaa.gov> was able to install R_MKL ver 4.0.1 on Tantalus (a Linux server running CentOS).
 

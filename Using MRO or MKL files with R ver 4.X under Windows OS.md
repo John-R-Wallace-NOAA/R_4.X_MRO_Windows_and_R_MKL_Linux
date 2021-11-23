@@ -1,6 +1,6 @@
 
 
-Here:
+Here* (see also the other sites given in the footnote below):
 
 https://social.msdn.microsoft.com/Forums/en-US/61c1c0c0-c1e9-47aa-b095-2ade5a28cf51/mro-36-coming?forum=ropen
 
@@ -8,7 +8,7 @@ Look for the title:
 
 <H4> Here is a short recipe to get Intel MKL up and running with R 3.6.2, just by copying across some of the Intel MKL BLAS files from Microsoft R Open to R 3.6.2, this is easier than having to recompile the whole of R against the Intel MKL libs</H4>
 
-This recipe works cleanly now that MRO version 4.1.2 has been released and both RevoUtilsMath::getMKLthreads() and setMKLthreads() work again.  Note that the 'doParallel' package is on CRAN and can be downloaded from there.
+This recipe works cleanly now that MRO version 4.1.2 has been released and both RevoUtilsMath::getMKLthreads() and setMKLthreads() work again.  Note that the 'doParallel' package is on CRAN and can be easily downloaded from there.
 
  The get_num_cores() function, in the R CRAN package: 'RhpcBLASctl', is one way find the number of cores on a computer system. Hence:
 
@@ -18,8 +18,10 @@ will reserve a single core for other work.
 
 #
 
-RhpcBLASctl::blas_set_num_threads() appears to work with MRO, with not only RhpcBLASctl::blas_get_num_procs() reporting the number of cores set, but even RevoUtilsMath::getMKLthreads() reports the same number of cores set. However, using the 'svdBenchMark' function in this repo it can be seen that the number of cores is not set properly. To see this, compare the following function calls:
+Be careful since RhpcBLASctl::blas_set_num_threads() appears to work with MRO, with not only RhpcBLASctl::blas_get_num_procs() reporting the number of cores set, but even RevoUtilsMath::getMKLthreads() reports the same number of cores set. However, using the 'svdBenchMark' function in this repo it can be seen that the number of cores is not set properly. To see this, compare the following function calls :
 
+     # install.packages('RhpcBLASctl')   # The 'RhpcBLASctl' package needs to be installed but not loaded
+     
      set.seed(707)
      svdBenchMark(4000, cores = 1:6, MRO = TRUE, MKL = FALSE)
  
@@ -30,7 +32,7 @@ RhpcBLASctl::blas_set_num_threads() appears to work with MRO, with not only Rhpc
 
 Tom Wenseleers' post also covers using Intel's latest (2019) files directly, however this currently (Nov 2021) does NOT work with R ver 4.X .
 
-If Intel's files are directly moved under R ver 3.X, then the 'RhpcBLASctl' package functions will work:
+If Intel's files are directly moved under R ver 3.X, then the 'RhpcBLASctl' package functions will work (and svdBenchMark(..., MKL = TRUE) will also work corretly):
 
     # Patched R ver 4.X with files directly from Intel
     > blas_set_num_threads(4)

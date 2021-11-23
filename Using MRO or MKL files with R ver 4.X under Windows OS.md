@@ -66,7 +66,7 @@ Here are other benchmarking runs to try with svdBenchMark():
      svdBenchMark(6000, cores = c(1, 3, 6), MRO = FALSE, MKL = TRUE)
      svdBenchMark(c(4000, 5000, 6000), cores = c(1, 3, 6), MRO = FALSE, MKL = TRUE)
 
-See the websites below for other benchmarking results. The benchmarking results vary between MRO and MKL when using the various benchmarking functions and scripts, with no clear winner revealed.
+See the websites below for other benchmarking scripts and results. The benchmarking results vary between MRO and MKL when using the various benchmarking functions and scripts, with no clear winner revealed.
 
 
 <H4> Footnotes </H4>

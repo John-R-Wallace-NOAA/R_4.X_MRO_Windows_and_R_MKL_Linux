@@ -1,6 +1,6 @@
 
 
-Here*:
+Here:
 
 https://social.msdn.microsoft.com/Forums/en-US/61c1c0c0-c1e9-47aa-b095-2ade5a28cf51/mro-36-coming?forum=ropen
 
@@ -8,47 +8,29 @@ Look for the title:
 
 <H4> Here is a short recipe to get Intel MKL up and running with R 3.6.2, just by copying across some of the Intel MKL BLAS files from Microsoft R Open to R 3.6.2, this is easier than having to recompile the whole of R against the Intel MKL libs</H4>
 
-This recipe will work for R ver 4.X in Windows 10, with the following changes.
+This recipe works cleanly now that MRO version 4.1.2 has been released and both RevoUtilsMath::getMKLthreads() and setMKLthreads() work again.  Note that the 'doParallel' package is on CRAN and can be downloaded from there.
 
-Skip step 4 in the recipe since the Revo packages no longer work with R ver 4.X.  If needed, the doParallel package is on CRAN, download it from there.
-
-RevoUtilsMath::getMKLthreads() and setMKLthreads() both now work. get_num_cores() in the R CRAN package, 'RhpcBLASctl', is one way find the number of cores on a computer system. Hence:
+ The get_num_cores() function, in the R CRAN package: 'RhpcBLASctl', is one way find the number of cores on a computer system. Hence:
 
       RevoUtilsMath::setMKLthreads(RhpcBLASctl::get_num_cores() - 1)
       
-will reserve a core for other work.  
+will reserve a single core for other work.  
 
 #
 
-Note that sessionInfo() for a properly installed R-MKL on Linux (CentOS) will show a link to the Intel libraries:
+RhpcBLASctl::blas_set_num_threads() appears to work with MRO, with not only RhpcBLASctl::blas_get_num_procs() reporting the number of cores set, but even RevoUtilsMath::getMKLthreads() reports the same number of cores set. However, using the 'svdBenchMark' function in this repo it can be seen that the number of cores is not set properly. To see this, compare the following function calls:
 
-    BLAS/LAPACK: /opt/intel/compilers_and_libraries_2020.1.217/linux/mkl/lib/intel64_lin/libmkl_gf_lp64.so
+     set.seed(707)
+     svdBenchMark(4000, cores = 1:6, MRO = TRUE, MKL = FALSE)
+ 
+     set.seed(707)
+     svdBenchMark(4000, cores = 1:6, MRO = FALSE, MKL = TRUE)
 
-Whereas, vanilla R-CRAN shows the standard libraries are used:
+#
 
-    BLAS:   /opt/R/64-bit/R-4.0.1/lib64/R/lib/libRblas.so
-    LAPACK: /opt/R/64-bit/R-4.0.1/lib64/R/lib/libRlapack.so
-    
-For a properly patched R ver 4.X under Windows, the sessionInfo()'s information doesn't change. However, using RhpcBLASctl::blas_get_num_procs() will push the 'detected function mkl_get_max_threads' message and, if so set, it will report the number of cores as being greater than 1.  Standard R-CRAN will do neither of these things:
-    
-    # Patched R ver 4.X
-    > blas_set_num_threads(4)
-    detected function mkl_set_num_threads
-    
-    > blas_get_num_procs()
-    detected function mkl_get_max_threads
-    [1] 4
-    
-    
-    # Unpatched R-CRAN
-    > blas_set_num_threads(4)
-    > blas_get_num_procs()
-    [1] 1
-    
+Tom Wenseleers' post also covers using Intel's latest (2019) files directly, however this currently (Nov 2021) does NOT work with R ver 4.X .
 
-Tom Wenseleers' post also covers using Intel's latest (2019) files directly, however this currently (Nov 2021) does not work with R ver 4.X .
-
-However if that is done on a R ver 3.X, then the 'RhpcBLASctl' package functions still work with blas_get_num_procs()'s message now changed to 'detected function mkl_domain_get_num_threads':
+If Intel's files are directly moved under R ver 3.X, then the 'RhpcBLASctl' package functions will work:
 
     # Patched R ver 4.X with files directly from Intel
     > blas_set_num_threads(4)
@@ -58,8 +40,21 @@ However if that is done on a R ver 3.X, then the 'RhpcBLASctl' package functions
     detected function mkl_domain_get_max_threads
     [1] 4
 
-The runtime savings for the benchmarking tests (in Controlling Multi-threading in R-MKL, Benchmarking, and Advice on Usage.md) using the latest Intel MKL files are similar to using the MRO ver 3.5.3 files.
 
+Note that sessionInfo() for a properly installed R-MKL on Linux (CentOS) will show a link to the Intel libraries:
+
+    BLAS/LAPACK: /opt/intel/compilers_and_libraries_2020.1.217/linux/mkl/lib/intel64_lin/libmkl_gf_lp64.so
+
+Whereas, vanilla R-CRAN on Linux shows the standard libraries are used:
+
+    BLAS:   /opt/R/64-bit/R-4.0.1/lib64/R/lib/libRblas.so
+    LAPACK: /opt/R/64-bit/R-4.0.1/lib64/R/lib/libRlapack.so
+    
+But for a patched MRO ver 4.X on Windows or MKL ver 3.X on Windows, the sessionInfo()'s information doesn't change. 
+
+#
+
+The runtime savings for the benchmarking tests (in 'Controlling Multi-threading in R-MKL, Benchmarking, and Advice on Usage.md') using the latest Intel MKL files are similar to using the MRO ver 3.5.3 files.
 
 <H4> Footnotes </H4>
 
@@ -69,7 +64,49 @@ https://stackoverflow.com/questions/38090206/linking-intels-math-kernel-library-
        
 This site points out that "Moving the MKL libs from MRO to normal R is a breach of the license: mran.microsoft.com/assets/text/mkl-eula.txt, hence that part is only a suggestion and do so at your own legal risk. Besides, the Intel method gets you the latest files available.
     
+Other sites of interst are: 
+
+
+     
+Building R 4+ for Windows with OpenBLAS
+     https://www.avrahamadler.com/2020/05/12/building-r-4-for-windows-with-openblas/
+
+
+Build R 4.0 with MKL (Commenter 'Ixxmu' writes that he got the build to work under CentOS 7, but he doesn't expalin how)
+     https://github.com/microsoft/microsoft-r-open/issues/116
+
+alexisphhigh_performance_r Instructions and benchmarks for high-performance computing in R
+     https://github.com/alexisph/high_performance_r
+
+Short recipe to get Intel MKL up and running with R 3.6.2   (Note that MRO is at version 4.0.2 as of 22 Nov 2021.)
+     https://social.msdn.microsoft.com/Forums/en-US/61c1c0c0-c1e9-47aa-b095-2ade5a28cf51/mro-36-coming?forum=ropen
+         
+Intel Math Kernel Library 10.1 for Windows* OS, Installation Guide  
+    http://registrationcenter-download.intel.com/akdlm/irc_nas/1468/mklinstall_10.1.3_win.htm#introduction
+
+
+# 
+
+Sites with benchmarking results   
+
+Andrie's version compare vignette
+    https://htmlpreview.github.io/?https://github.com/andrie/version.compare/blob/master/inst/doc/version.compare.html
     
+ which is linked from
+    https://github.com/andrie/version.compare
+    
+  
+Speeding up R with Intel’s Math Kernel Library (MKL)
+    https://www.r-bloggers.com/2012/05/speeding-up-r-with-intels-math-kernel-library-mkl/
 
+    
+MKL multithreaded library and mclapply do not play well together   
+    https://blog.revolutionanalytics.com/2015/10/edge-cases-in-using-the-intel-mkl-and-parallel-programming.html
+    
+    
+    
+Old references
 
+Extending R with Intel MKL 
+    https://www.intel.com/content/www/us/en/developer/articles/technical/extending-r-with-intel-mkl.html
 

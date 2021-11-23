@@ -1,6 +1,6 @@
 svdBenchMark <- function(n = c(4000, 5000, 6000), cores = c(1, 3, 6), MRO = TRUE, MKL = FALSE) {
 
-    for (i in (4:6)[3]) {
+    for (i in 1:length(n)) {
     
        m <- 10000
        A <- matrix (runif (m*n),m,n)

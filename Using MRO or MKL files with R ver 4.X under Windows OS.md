@@ -127,7 +127,7 @@ https://blog.revolutionanalytics.com/2015/10/edge-cases-in-using-the-intel-mkl-a
     
 #    
     
-Old references
+Older references
 
 Extending R with Intel MKL
 

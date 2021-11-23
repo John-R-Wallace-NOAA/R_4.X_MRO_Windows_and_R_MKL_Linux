@@ -54,7 +54,18 @@ But for a patched MRO ver 4.X on Windows or MKL ver 3.X on Windows, the sessionI
 
 #
 
-The runtime savings for the benchmarking tests (in 'Controlling Multi-threading in R-MKL, Benchmarking, and Advice on Usage.md') using the latest Intel MKL files are similar to using the MRO ver 3.5.3 files.
+Here are other benchmarking runs to try with svdBenchMark:
+
+     # Under MRO
+     svdBenchMark(6000, cores = c(1, 3, 6), MRO = TRUE, MKL = FALSE)
+     svdBenchMark(c(4000, 5000, 6000), cores = c(1, 3, 6), MRO = TRUE, MKL = FALSE)
+     
+     # Under MKL
+     svdBenchMark(6000, cores = c(1, 3, 6), MRO = FALSE, MKL = TRUE)
+     svdBenchMark(c(4000, 5000, 6000), cores = c(1, 3, 6), MRO = FALSE, MKL = TRUE)
+
+See the websites below for other benchmarking results. The benchmarking results vary between MRO and MKL when using the various benchmarking functions and scripts.
+
 
 <H4> Footnotes </H4>
 
@@ -69,20 +80,25 @@ Other sites of interst are:
 
      
 Building R 4+ for Windows with OpenBLAS
-     https://www.avrahamadler.com/2020/05/12/building-r-4-for-windows-with-openblas/
+
+https://www.avrahamadler.com/2020/05/12/building-r-4-for-windows-with-openblas/
 
 
 Build R 4.0 with MKL (Commenter 'Ixxmu' writes that he got the build to work under CentOS 7, but he doesn't expalin how)
-     https://github.com/microsoft/microsoft-r-open/issues/116
+
+https://github.com/microsoft/microsoft-r-open/issues/116
 
 alexisphhigh_performance_r Instructions and benchmarks for high-performance computing in R
-     https://github.com/alexisph/high_performance_r
+
+https://github.com/alexisph/high_performance_r
 
 Short recipe to get Intel MKL up and running with R 3.6.2   (Note that MRO is at version 4.0.2 as of 22 Nov 2021.)
-     https://social.msdn.microsoft.com/Forums/en-US/61c1c0c0-c1e9-47aa-b095-2ade5a28cf51/mro-36-coming?forum=ropen
+
+https://social.msdn.microsoft.com/Forums/en-US/61c1c0c0-c1e9-47aa-b095-2ade5a28cf51/mro-36-coming?forum=ropen
          
-Intel Math Kernel Library 10.1 for Windows* OS, Installation Guide  
-    http://registrationcenter-download.intel.com/akdlm/irc_nas/1468/mklinstall_10.1.3_win.htm#introduction
+Intel Math Kernel Library 10.1 for Windows* OS, Installation Guide 
+
+http://registrationcenter-download.intel.com/akdlm/irc_nas/1468/mklinstall_10.1.3_win.htm#introduction
 
 
 # 
@@ -90,23 +106,28 @@ Intel Math Kernel Library 10.1 for Windows* OS, Installation Guide
 Sites with benchmarking results   
 
 Andrie's version compare vignette
-    https://htmlpreview.github.io/?https://github.com/andrie/version.compare/blob/master/inst/doc/version.compare.html
+
+https://htmlpreview.github.io/?https://github.com/andrie/version.compare/blob/master/inst/doc/version.compare.html
     
  which is linked from
-    https://github.com/andrie/version.compare
+ 
+https://github.com/andrie/version.compare
     
   
 Speeding up R with Intel’s Math Kernel Library (MKL)
-    https://www.r-bloggers.com/2012/05/speeding-up-r-with-intels-math-kernel-library-mkl/
+
+https://www.r-bloggers.com/2012/05/speeding-up-r-with-intels-math-kernel-library-mkl/
 
     
-MKL multithreaded library and mclapply do not play well together   
-    https://blog.revolutionanalytics.com/2015/10/edge-cases-in-using-the-intel-mkl-and-parallel-programming.html
+MKL multithreaded library and mclapply do not play well together
+
+https://blog.revolutionanalytics.com/2015/10/edge-cases-in-using-the-intel-mkl-and-parallel-programming.html
     
     
     
 Old references
 
-Extending R with Intel MKL 
-    https://www.intel.com/content/www/us/en/developer/articles/technical/extending-r-with-intel-mkl.html
+Extending R with Intel MKL
+
+https://www.intel.com/content/www/us/en/developer/articles/technical/extending-r-with-intel-mkl.html
 

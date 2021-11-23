@@ -8,21 +8,23 @@ Look for the title:
 
 <H4> Here is a short recipe to get Intel MKL up and running with R 3.6.2, just by copying across some of the Intel MKL BLAS files from Microsoft R Open to R 3.6.2, this is easier than having to recompile the whole of R against the Intel MKL libs</H4>
 
-This recipe will work for R ver 4.X, with the following changes.
+This recipe will work for R ver 4.X in Windows 10, with the following changes.
 
 Skip step 4 in the recipe since the Revo packages no longer work with R ver 4.X.  If needed, the doParallel package is on CRAN, download it from there.
 
-getMKLthreads() and setMKLthreads() both now work. get_num_cores() in the R CRAN package, 'RhpcBLASctl', is one way find the number of cores on a computer system. Hence:
+RevoUtilsMath::getMKLthreads() and setMKLthreads() both now work. get_num_cores() in the R CRAN package, 'RhpcBLASctl', is one way find the number of cores on a computer system. Hence:
 
-      RevoUtilsMath::setMKLthreads(RhpcBLASctl::get_num_cores() - 1))
+      RevoUtilsMath::setMKLthreads(RhpcBLASctl::get_num_cores() - 1)
       
-would reserve a core for other work.  
+will reserve a core for other work.  
+
+#
 
 Note that sessionInfo() for a properly installed R-MKL on Linux (CentOS) will show a link to the Intel libraries:
 
     BLAS/LAPACK: /opt/intel/compilers_and_libraries_2020.1.217/linux/mkl/lib/intel64_lin/libmkl_gf_lp64.so
 
-Whereas, R-CRAN shows the standard libraries are used:
+Whereas, vanilla R-CRAN shows the standard libraries are used:
 
     BLAS:   /opt/R/64-bit/R-4.0.1/lib64/R/lib/libRblas.so
     LAPACK: /opt/R/64-bit/R-4.0.1/lib64/R/lib/libRlapack.so
@@ -44,7 +46,9 @@ For a properly patched R ver 4.X under Windows, the sessionInfo()'s information 
     [1] 1
     
 
-Tom Wenseleers' post also covers using Intel's latest files directly. If that is done, then the 'RhpcBLASctl' package functions still work with blas_get_num_procs()'s message now changed to 'detected function mkl_domain_get_num_threads':
+Tom Wenseleers' post also covers using Intel's latest (2019) files directly, however this currently (Nov 2021) does not work with R ver 4.X .
+
+However if that is done on a R ver 3.X, then the 'RhpcBLASctl' package functions still work with blas_get_num_procs()'s message now changed to 'detected function mkl_domain_get_num_threads':
 
     # Patched R ver 4.X with files directly from Intel
     > blas_set_num_threads(4)

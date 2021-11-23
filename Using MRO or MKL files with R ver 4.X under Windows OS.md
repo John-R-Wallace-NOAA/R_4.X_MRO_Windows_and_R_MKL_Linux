@@ -32,7 +32,7 @@ Be careful since RhpcBLASctl::blas_set_num_threads() appears to work with MRO, w
 
 Tom Wenseleers' post also covers using Intel's latest (2019) files directly, however this currently (Nov 2021) does NOT work with R ver 4.X .
 
-If Intel's files are directly moved under R ver 3.X, then the 'RhpcBLASctl' package functions will work (and svdBenchMark(..., MKL = TRUE) will also work corretly):
+If Intel's files are directly moved under R ver 3.X, then the 'RhpcBLASctl' package functions will work (and svdBenchMark(..., MKL = TRUE) will also work correctly):
 
     # Patched R ver 4.X with files directly from Intel
     > blas_set_num_threads(4)
@@ -56,7 +56,7 @@ But for a patched MRO ver 4.X on Windows or MKL ver 3.X on Windows, the sessionI
 
 #
 
-Here are other benchmarking runs to try with svdBenchMark:
+Here are other benchmarking runs to try with svdBenchMark():
 
      # Under MRO
      svdBenchMark(6000, cores = c(1, 3, 6), MRO = TRUE, MKL = FALSE)
@@ -66,7 +66,7 @@ Here are other benchmarking runs to try with svdBenchMark:
      svdBenchMark(6000, cores = c(1, 3, 6), MRO = FALSE, MKL = TRUE)
      svdBenchMark(c(4000, 5000, 6000), cores = c(1, 3, 6), MRO = FALSE, MKL = TRUE)
 
-See the websites below for other benchmarking results. The benchmarking results vary between MRO and MKL when using the various benchmarking functions and scripts.
+See the websites below for other benchmarking results. The benchmarking results vary between MRO and MKL when using the various benchmarking functions and scripts, with no clear winner revealed.
 
 
 <H4> Footnotes </H4>
@@ -75,9 +75,9 @@ See the websites below for other benchmarking results. The benchmarking results 
     
 https://stackoverflow.com/questions/38090206/linking-intels-math-kernel-library-mkl-to-r-on-windows
        
-This site points out that "Moving the MKL libs from MRO to normal R is a breach of the license: mran.microsoft.com/assets/text/mkl-eula.txt, hence that part is only a suggestion and do so at your own legal risk. Besides, the Intel method gets you the latest files available.
+This site points out that "Moving the MKL libs from MRO to normal R is a breach of the license: mran.microsoft.com/assets/text/mkl-eula.txt, hence that part is only a suggestion and do so at your own legal risk.
     
-Other sites of interst are: 
+Other sites of interst: 
 
 
      
@@ -125,7 +125,7 @@ MKL multithreaded library and mclapply do not play well together
 
 https://blog.revolutionanalytics.com/2015/10/edge-cases-in-using-the-intel-mkl-and-parallel-programming.html
     
-    
+#    
     
 Old references
 

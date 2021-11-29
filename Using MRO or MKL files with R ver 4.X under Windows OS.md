@@ -60,10 +60,17 @@ But for a patched MRO ver 4.X on Windows or MKL ver 3.X on Windows, the sessionI
 Here are other benchmarking runs to try with svdBenchMark():
 
      # Under MRO
+     
+     svdBenchMark(600, cores = c(1, 3, 6), MRO = TRUE, MKL = FALSE)  # Quick ones first to see what happens
+     svdBenchMark(c(400, 500, 600), cores = c(1, 3, 6), MRO = TRUE, MKL = FALSE)
+     
      svdBenchMark(6000, cores = c(1, 3, 6), MRO = TRUE, MKL = FALSE)
      svdBenchMark(c(4000, 5000, 6000), cores = c(1, 3, 6), MRO = TRUE, MKL = FALSE)
      
      # Under MKL
+     svdBenchMark(600, cores = c(1, 3, 6), MRO = FALSE, MKL = TRUE)  # Quick ones first to see what happens
+     svdBenchMark(c(400, 500, 600), cores = c(1, 3, 6), MRO = FALSE, MKL = TRUE)
+     
      svdBenchMark(6000, cores = c(1, 3, 6), MRO = FALSE, MKL = TRUE)
      svdBenchMark(c(4000, 5000, 6000), cores = c(1, 3, 6), MRO = FALSE, MKL = TRUE)
 

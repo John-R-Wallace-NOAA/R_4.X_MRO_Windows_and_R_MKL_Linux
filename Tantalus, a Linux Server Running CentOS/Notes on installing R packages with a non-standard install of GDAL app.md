@@ -33,7 +33,7 @@ Linker bindings entries for an app:
     [jwallace@nwctantalus R]$ ldconfig -p | grep gdal
     
     
- See also 'Failing to install sf on a CentoOS machine with R 3.5.1':
+ See also 'Failing to install sf on a CentoOS machine with R 3.5.1' here:
  
      https://github.com/r-spatial/sf/issues/815
     

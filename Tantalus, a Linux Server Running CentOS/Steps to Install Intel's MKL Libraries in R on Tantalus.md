@@ -16,7 +16,7 @@ This installs the R-MKL here:
 
      /opt/R/64-bit/R-4.1.2_MKL/
 
-From a console window R-MKL is started with:
+From a console window, R-MKL is started with:
 
     /opt/R/64-bit/R-4.1.2_MKL/bin/R
 

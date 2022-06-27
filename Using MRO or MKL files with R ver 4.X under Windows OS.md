@@ -4,7 +4,7 @@ Here* (see also the other sites given in the footnote below):
 
 https://social.msdn.microsoft.com/Forums/en-US/61c1c0c0-c1e9-47aa-b095-2ade5a28cf51/mro-36-coming?forum=ropen
 
-Look for the title:
+Look for the title (look down the page of the title, the search feature is poor):
 
 <H4> Here is a short recipe to get Intel MKL up and running with R 3.6.2, just by copying across some of the Intel MKL BLAS files from Microsoft R Open to R 3.6.2, this is easier than having to recompile the whole of R against the Intel MKL libs</H4>
 

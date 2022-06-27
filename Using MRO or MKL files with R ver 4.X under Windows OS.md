@@ -8,7 +8,7 @@ Look for the title:
 
 <H4> Here is a short recipe to get Intel MKL up and running with R 3.6.2, just by copying across some of the Intel MKL BLAS files from Microsoft R Open to R 3.6.2, this is easier than having to recompile the whole of R against the Intel MKL libs</H4>
 
-This recipe works cleanly now that MRO version 4.1.2 has been released and both RevoUtilsMath::getMKLthreads() and setMKLthreads() work again.  Note that the 'doParallel' package is on CRAN and can be easily downloaded from there.
+This recipe works cleanly now that MRO version 4.0.2 has been released and both RevoUtilsMath::getMKLthreads() and setMKLthreads() work again.  Note that the 'doParallel' package is on CRAN and can be easily downloaded from there.
 
  The get_num_cores() function, in the R CRAN package: 'RhpcBLASctl', is one way find the number of cores on a computer system. Hence:
 

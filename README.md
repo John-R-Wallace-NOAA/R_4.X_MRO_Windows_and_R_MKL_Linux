@@ -1,7 +1,7 @@
 
 UPDATE (as of Nov 2021):  
 
-MRO is now updated to version 4.0.2 with RevoUtilsMath::getMKLthreads() and setMKLthreads() again working properly.  I have updated the information here:  
+MRO updated to version 4.0.2 with RevoUtilsMath::getMKLthreads() and setMKLthreads() again working properly for R ver 4.0.x and 4.1.X but broken for R ver 4.2.X.  I have updated the information here:  
 
     Using MRO or MKL files with R ver 4.X under Windows OS.md
 # 

@@ -18,7 +18,7 @@ will reserve a single core for other work.
 
 #
 
-Be careful since RhpcBLASctl::blas_set_num_threads() appears to work with MRO, with not only RhpcBLASctl::blas_get_num_procs() reporting the number of cores set, but even RevoUtilsMath::getMKLthreads() reports the same number of cores set. However, using the 'svdBenchMark' function in this repo it can be seen that the number of cores is not set properly. To see this, compare the following function calls :
+Be careful since RhpcBLASctl::blas_set_num_threads() appears to work with MRO, with not only RhpcBLASctl::blas_get_num_procs() reporting the number of cores set, but even RevoUtilsMath::getMKLthreads() reports the same number of cores set. However, using the 'svdBenchMark' function in the 'R' folder of this repo it can be seen that the number of cores is not set properly. To see this, compare the following function calls :
 
      # The 'RevoUtilsMath' and 'RhpcBLASctl' packages need to be installed but not loaded 
      # install.packages('RhpcBLASctl')   

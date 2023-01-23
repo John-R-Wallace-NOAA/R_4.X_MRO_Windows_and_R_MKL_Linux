@@ -17,6 +17,17 @@ To see the version of an app on Linux:
     [jwallace@nwctantalus ~]$ rpm -q gdal
     gdal-1.11.4-3.el7.x86_64
     
+    Also:
+    [jwallace@nwctantalus R]$ ogrinfo --version
+    ogrinfo: /opt/gdal/tiff-4.0.10/lib/libtiff.so.5: no version information available (required by /lib64/libgdal.so.1)
+    ogrinfo: /opt/gdal/tiff-4.0.10/lib/libtiff.so.5: no version information available (required by /lib64/libpoppler.so.46)
+    ogrinfo: /opt/gdal/tiff-4.0.10/lib/libtiff.so.5: no version information available (required by /lib64/libgeotiff.so.1.2)
+    \GDAL 1.11.4, released 2016/01/25
+
+    And on Unbuntu running under Windows Subsystem for Linux (WSL):
+    wallacej@NWCLW04432670:/mnt/c/R$ ogrinfo --version
+    GDAL 3.3.2, released 2021/09/01
+    
 To see the location of an app
 
     [jwallace@nwctantalus ~]$ rpm -ql gdal
